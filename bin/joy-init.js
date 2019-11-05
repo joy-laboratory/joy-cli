@@ -7,6 +7,7 @@ const packageName = require('../package.json').name
 const inquirer = require('../core/inquirer')
 const downloadTemplate = require('../core/downloadTemplate')
 const generateTemplate = require('../core/generateTemplate')
+const startUse = require('../core/startUse')
 
 // 将process.argv参数赋值给program
 program.usage('<project-name>').parse(process.argv)
@@ -31,11 +32,13 @@ async function init() {
   const downData = await downloadTemplate(projectName)
 
   // 渲染模板 输出
-  const { projectRoot } = await generateTemplate({
+  await generateTemplate({
     ...projectData,
     ...inquirerData,
     ...downData
   })
+
+  startUse(projectData)
 
   process.exit(1)
 }

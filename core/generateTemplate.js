@@ -7,7 +7,7 @@ const rm = require('rimraf').sync
 
 /* 基于模板渲染输出 */
 module.exports = data => {
-  const spinner = ora({ color: 'yellow', text: '开始建筑工程...' })
+  const spinner = ora({ color: 'white', text: '开始建筑工程...' })
   spinner.start()
   return new Promise((resolve, reject) => {
     const _tempPath = path.join(data.projectRoot, data.tempName)

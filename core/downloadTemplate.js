@@ -7,7 +7,7 @@ const TEMP = '.download-temp'
 /* 下载模板 */
 module.exports = target => {
   target = path.join(target || '.', TEMP)
-  const spinner = ora({ color: 'green', text: '开始下载模版文件...' })
+  const spinner = ora({ color: 'white', text: '开始下载模版文件...' })
   spinner.start()
   return new Promise((resolve, reject) => {
     download(

@@ -10,7 +10,7 @@ const cwd = process.cwd()
 module.exports = projectName => {
   let next = undefined
   const fileList = glob.sync('*')
-  const spinner = ora({ color: 'yellow', text: '正在创建目录...' })
+  const spinner = ora({ color: 'white', text: '正在创建目录...' })
 
   if (fileList.length) {
     if (

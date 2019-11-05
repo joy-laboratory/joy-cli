@@ -30,7 +30,7 @@ module.exports = async () => {
       router: true,
       redux: true,
       less: true,
-      antd: false,
+      antd: true,
       element: false
     })
   }
