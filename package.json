@@ -1,5 +1,5 @@
 {
-  "name": "@joy/joy-cli",
+  "name": "@joylaboratory/joy-cli",
   "version": "1.0.0",
   "description": "自动化构建",
   "scripts": {
